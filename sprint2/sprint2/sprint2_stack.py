@@ -96,39 +96,6 @@ class Sprint2Stack(cdk.Stack):
             count+=1
         
 
-        """ 
-     # AVAILABILITY ALARM    
-        dimenesion= {'URL':constants.URL_to_Monitor} 
-        availability_metric = cloudwatch_.Metric(
-        namespace=constants.URL_Monitor_Namespace,
-        metric_name=constants.URL_Monitor_Name_Availability,
-        dimensions_map=dimenesion,
-        period= cdk.Duration.minutes(1))
-        
-        availability_alarm= cloudwatch_.Alarm(self,
-        id="AvailabilityAlarm",
-        metric= availability_metric,
-        comparison_operator=cloudwatch_.ComparisonOperator.LESS_THAN_THRESHOLD,
-        datapoints_to_alarm=1,
-        evaluation_periods=1,
-        threshold=1)
-        
-     # LATENCY ALARM     
-        dimenesion= {'URL':constants.URL_to_Monitor}
-        Latency_metric = cloudwatch_.Metric(
-        namespace=constants.URL_Monitor_Namespace,
-        metric_name=constants.URL_Monitor_Name_Latency,
-        dimensions_map=dimenesion,
-        period= cdk.Duration.minutes(1))
-        
-        latency_alarm= cloudwatch_.Alarm(self,
-        id="LatencyAlarm",
-        metric= Latency_metric,
-        comparison_operator=cloudwatch_.ComparisonOperator.GREATER_THAN_THRESHOLD,
-        datapoints_to_alarm=1,
-        evaluation_periods=1,
-        threshold=0.25)
-        """
 #############################################################
         ############ SPRINT 2 CODE ADDITION #######
         # DEFININING ROLLBACK METRIC
